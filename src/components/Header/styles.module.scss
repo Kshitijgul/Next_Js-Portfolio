@@ -1,0 +1,133 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    align-items: center;
+    // position: fixed;  // Changed from absolute to fixed
+    position: absolute;
+    top: 0%;
+
+    .logo {
+        display: flex;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+        &:hover {
+            .copyright {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .copyright {
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1); // Add transition for transform
+    }
+    .nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      
+        .el {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          z-index: 1;
+          padding: 15px;
+          cursor: pointer;
+      
+          &:hover {
+            .indicator {
+              transform: scale(1) translateX(-50%);
+            }
+          }
+      
+          .indicator {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 45px;
+            left: 50%;
+            background-color: white;
+            border-radius: 50%;
+            transform: scale(0) translateX(-50%);
+            transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+          }
+      
+          // Active state: Add a condition to scale the indicator
+          &.active {
+            .indicator {
+              transform: scale(1) translateX(-50%);
+            }
+          }
+        }
+      
+        a {
+          cursor: pointer;
+        }
+      }
+      
+
+    .headerButtonContainer {
+        transform: scale(0);
+        position: fixed;
+        right: 0px;
+        z-index: 4;
+
+        .button {
+            position: relative;
+            margin: 20px;
+            width: 80px;
+            height: 80px;
+            border: 1px white solid;
+            border-radius: 50%;
+            background-color: #1c1d20;
+            // background-color: #7B7B7B;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .burger {
+            width: 100%;
+            position: relative;
+      
+            z-index: 1;
+            &::after,
+            &::before {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 40%;
+                margin: auto;
+                background-color: white;
+                position: relative;
+                transition: transform 0.3s;
+            }
+
+            &::after {
+                top: -5px;
+            }
+
+            &::before {
+                top: 5px;
+            }
+        }
+
+        .burgerActive {
+            &::after {
+                transform: rotate(45deg);
+                top: -1px;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+                top: 0px;
+            }
+        }
+    }
+}

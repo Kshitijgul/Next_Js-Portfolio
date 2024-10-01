@@ -1,0 +1,43 @@
+$primaryColor: #252428;
+$secondaryColor: #45424b;
+
+.main{
+    height: 100vh;
+    background-color: $primaryColor;
+}
+.main_land {
+    padding-top: 20rem;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // height:90%;
+
+    .main_text {
+        line-height: 5rem;
+        // text-align: center;
+        font-size: 4rem;
+        // white-space: nowrap;
+        width: 50%;
+        // align-items: center; /* Align items in the center */
+        justify-content: center; /* Center text horizontally */
+        .highlight {
+            background-color: $secondaryColor;
+            padding: 6px;
+            border-radius: 25px;
+        }
+    }
+
+    .start_comma,
+    .end_comma {
+        margin: 0rem 1rem;
+    }
+
+    .comma {
+        font-size: 4.5rem;
+    }
+}
+.arrow{
+    position:absolute;
+    left:10rem;
+    bottom:10rem;
+}

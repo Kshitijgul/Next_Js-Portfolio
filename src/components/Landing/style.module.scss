@@ -1,0 +1,111 @@
+$primaryColor: #252428;
+$secondaryColor: #45424b;
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: $primaryColor;
+
+    .ImageContainer {
+        position: relative;
+        top: 8rem;
+        margin: 0px auto;
+        height: 35vw;
+        width: 35vw;
+        background-color: $secondaryColor;
+        border-radius: 50%;
+        overflow: hidden;
+
+        // Apply styles directly to the img element rendered by next/image
+        img {
+            object-fit: cover;
+            filter: drop-shadow(12px 12px 12px #222);
+        }
+    }
+    .sliderContainer {
+        position: absolute;
+        top: calc(100vh - 250px);
+    }
+
+    .slider {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .slider p {
+        position: relative;
+        margin: 0px;
+        color: white;
+        font-size: 230px;
+        font-weight: 50;
+        padding-right: 50px;
+    }
+
+    .slider p:nth-of-type(2) {
+        position: absolute;
+        left: 100%;
+        top: 0;
+    }
+
+    .description {
+        position: absolute;
+        top: 45%;
+        right: 12%;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 300;
+        p {
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+        svg {
+            transform: scale(4);
+            margin-bottom: 2rem;
+        }
+    }
+    .locationContainer {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 15rem; // Tailwind w-60 is 15rem
+        height: 5rem; // Tailwind h-20 is 5rem
+        background-color: $secondaryColor;
+        border-top-right-radius: 50px; // Tailwind rounded-tr-full
+        border-bottom-right-radius: 50px; // Tailwind rounded-br-full
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .locationText {
+            padding: 0.4rem; // Tailwind p-4
+            color: white;
+            font-size: 1.2rem; // Adjust font-size as needed
+        }
+
+        .svgContainer {
+            // background-color: $secondaryColor;
+            background-color: $primaryColor;
+            border-radius: 50%; // Tailwind rounded-full
+            margin: 0 0.5rem; // Tailwind mx-2
+            height: 3.5rem; // Tailwind h-14 is 3.5rem
+            width: 3.5rem; // Tailwind w-14 is 3.5rem
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .spinner {
+                animation: spin 5s linear infinite; // Tailwind animate-spin-slow
+            }
+        }
+    }
+
+    // Define keyframe for spinner animation
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

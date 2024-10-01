@@ -1,0 +1,64 @@
+.main {
+    height: 100vh;
+    display: flex;
+    padding: 0rem 5rem;
+    background-color: white;
+    color: black;
+  
+    .FixedContainer {
+      width: 40vw;
+      padding: 1rem;
+  
+      .round {
+        border-radius: 50%;
+        align-content: center;
+        text-align: center;
+        height: 12rem;
+        width: 12rem;
+        background-color: black;
+        margin: 3rem;
+  
+        p:nth-of-type(1) {
+          color: white;
+          font-size: 1rem;
+        }
+      }
+  
+      // Apply styling to the paragraph with a separate class
+      .paragraph {
+        font-size: 1.5rem;
+        text-align: start;
+        line-height: 1.6; // Adjust line-height for better readability
+        color: #333; // Customize the paragraph text color as per design
+  
+        &::before {
+          content: '“'; // Left double quote
+          font-size: 2rem; // Make the quotes larger
+          color: gray; // Change color of quotes if needed
+          margin-right: 5px; // Add space after the opening quote
+        }
+  
+        &::after {
+          content: '”'; // Right double quote
+          font-size: 2rem; // Make the quotes larger
+          color: black; // Change color of quotes
+          margin-left: 5px; // Add space before the closing quote
+        }
+      }
+    }
+    .ScrollContainer{
+      height: 100vh;
+      width: 60vw;
+        font-size: 2rem;
+        padding: 5rem;
+        // background:rgb(196, 196, 196);
+        font-weight: 600;
+        p > span{
+            background-color: #333;
+            padding: 0 12px;
+            color: white;
+            border-radius: 15px;
+        }
+    }
+  }
+  
