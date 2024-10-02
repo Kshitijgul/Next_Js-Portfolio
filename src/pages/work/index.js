@@ -7,7 +7,7 @@ import Loco from "../../components/Layout/Loco";
 import Work_Land from "../../components/Work_Land";
 import Work_Projects from "../../components/Work_Projects";
 import Projects from "../../components/Projects";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Index";
 
 const index = () => {
   const router = useRouter();
