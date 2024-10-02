@@ -66,7 +66,7 @@ const Index = () => {
         <div className={styles.container}>
           <div className={styles.heading}>
             <h1>
-              Let's start a <br />
+              Let&#39;s start a <br />
               project together
             </h1>
           </div>
@@ -88,7 +88,7 @@ const Index = () => {
                 <div className={styles.border}></div>
 
                 <div className={styles.inputGroup}>
-                  <label htmlFor="name">What's your name?</label>
+                  <label htmlFor="name">What&#39;s your name?</label>
                   <input
                     value={fromName}
                     onChange={(e) => setFromName(e.target.value)}
@@ -103,7 +103,7 @@ const Index = () => {
                 <div className={styles.border}></div>
 
                 <div className={styles.inputGroup}>
-                  <label htmlFor="email">What's your email?</label>
+                  <label htmlFor="email">What&#39;s your email?</label>
                   <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -118,7 +118,7 @@ const Index = () => {
                 <div className={styles.border}></div>
 
                 <div className={styles.inputGroup}>
-                  <label htmlFor="purpose">What's your purpose?</label>
+                  <label htmlFor="purpose">What&#39;s your purpose?</label>
                   <input
                     value={purpose}
                     onChange={(e) => setPurpose(e.target.value)}
@@ -152,7 +152,7 @@ const Index = () => {
                     backgroundColor={"#334BD3"}
                     className={styles.button}
                   >
-                   <p>Send</p>
+                    <p>Send</p>
                   </Rounded>
                 </button>
               </form>
