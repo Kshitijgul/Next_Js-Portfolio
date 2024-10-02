@@ -8,9 +8,9 @@ import styles from "@/styles/Home.module.css";
 import LocomotiveScroll from "locomotive-scroll";
 import Description from "../components/Description";
 import Skills from "../components/Skills";
-import Education from "../components/Education/Index";
+import Education from "../components/Education/";
 import SlidingImages from "../components/SlidingImages";
-import Footer from "../components/Footer/Index";
+import Footer from "../components/Footer/";
 
 // Import custom fonts
 const geistSans = localFont({
