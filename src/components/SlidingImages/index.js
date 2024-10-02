@@ -70,7 +70,7 @@ export default function Index() {
            60vw"
                 fill={true}
                 alt={"image"}
-                src={`/images/${project.src}`}
+                src={`/Images/${project.src}`}
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Index() {
            60vw"
                 fill={true}
                 alt={"image"}
-                src={`/images/${project.src}`}
+                src={`/Images/${project.src}`}
               />
             </div>
           </div>

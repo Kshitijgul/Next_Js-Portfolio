@@ -74,7 +74,7 @@ const Index = () => {
           quality={100}
           width={550}
           height={650}
-          src="/images/profile-removebg.png"
+          src="/Images/profile-removebg.png"
           alt="background"
         />
       </div>
