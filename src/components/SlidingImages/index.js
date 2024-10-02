@@ -42,7 +42,8 @@ const slider2 = [
   },
 ];
 
-export default function index() {
+// Ensure the component name is capitalized
+export default function Index() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -56,51 +57,46 @@ export default function index() {
   return (
     <div ref={container} className={styles.slidingImages}>
       <motion.div style={{ x: x1 }} className={styles.slider}>
-        {slider1.map((project, index) => {
-          return (
-            <div
-              key={index}
-              className={styles.project}
-              style={{ backgroundColor: project.color }}
-            >
-              <div className={styles.imageContainer}>
-                <Image
+        {slider1.map((project, index) => (
+          <div
+            key={index}
+            className={styles.project}
+            style={{ backgroundColor: project.color }}
+          >
+            <div className={styles.imageContainer}>
+              <Image
                 sizes="(max-width: 768px) 100vw, 
            (max-width: 1200px) 80vw, 
            60vw"
-                  fill={true}
-                  alt={"image"}
-                  src={`/images/${project.src}`}
-                />
-              </div>
+                fill={true}
+                alt={"image"}
+                src={`/images/${project.src}`}
+              />
             </div>
-          );
-        })}
+          </div>
+        ))}
       </motion.div>
       <motion.div style={{ x: x2 }} className={styles.slider}>
-        {slider2.map((project, index) => {
-          return (
-            <div
-              key={index}
-              className={styles.project}
-              style={{ backgroundColor: project.color }}
-            >
-              <div key={index} className={styles.imageContainer}>
-                <Image
+        {slider2.map((project, index) => (
+          <div
+            key={index}
+            className={styles.project}
+            style={{ backgroundColor: project.color }}
+          >
+            <div className={styles.imageContainer}>
+              <Image
                 sizes="(max-width: 768px) 100vw, 
            (max-width: 1200px) 80vw, 
            60vw"
-                  fill={true}
-                  alt={"image"}
-                  src={`/images/${project.src}`}
-                />
-              </div>
+                fill={true}
+                alt={"image"}
+                src={`/images/${project.src}`}
+              />
             </div>
-          );
-        })}
- 
+          </div>
+        ))}
       </motion.div>
-          <p className={styles.button}>More work</p>
+      <p className={styles.button}>More work</p>
       <motion.div style={{ height }} className={styles.circleContainer}>
         <div className={styles.circle}></div>
       </motion.div>
