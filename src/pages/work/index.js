@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Loco from "../../components/Layout/Loco";
 import Work_Land from "../../components/Work_Land";
-import Work_Projects from "../../components/Work_Projects";
+import Work_Projects from "../../components/work_Projects";
 import Projects from "../../components/Projects";
-import Footer from "../../components/Footer/Index";
+import Footer from "../../components/Footer/";
 
 const Index = () => {
   const router = useRouter();
