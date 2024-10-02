@@ -33,20 +33,20 @@ const skillsData = {
   databases: {
     headline: "Databases",
     images: [
-      { name: "MongoDB", url: "/images/mongo.png" },
-      { name: "MySQL", url: "/images/mysql.png" },
+      { name: "MongoDB", url: "/Images/mongo.png" },
+      { name: "MySQL", url: "/Images/mysql.png" },
     ],
   },
   tools: {
     headline: "Other Technologies & Tools",
     images: [
-      { name: "Git", url: "/images/github.png" },
+      { name: "Git", url: "/Images/github.png" },
       // { name: "Webpack", url: "/images/webpack.png" },
-      { name: "VSCode", url: "/images/vscode.png" },
-      { name: "Postman", url: "/images/postman.png" },
-      { name: "GSAP", url: "/images/gsap.png" },
-      { name: "Data Science", url: "/images/datasccience.png" },
-      { name: "Machine Learning", url: "/images/machine_learning.png" },
+      { name: "VSCode", url: "/Images/vscode.png" },
+      { name: "Postman", url: "/Images/postman.png" },
+      { name: "GSAP", url: "/Images/gsap.png" },
+      { name: "Data Science", url: "/Images/datasccience.png" },
+      { name: "Machine Learning", url: "/Images/machine_learning.png" },
     ],
   },
 };
