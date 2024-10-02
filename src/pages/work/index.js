@@ -9,7 +9,7 @@ import Work_Projects from "../../components/Work_Projects";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer/Index";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const [pageTitle, setPageTitle] = useState("About"); // Default title
 
@@ -56,4 +56,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
