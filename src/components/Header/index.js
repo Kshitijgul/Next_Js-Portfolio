@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router"; // Import useRouter
 import styles from "./styles.module.scss";
-import Nav from "./nav/Index";
+import Nav from "./nav";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Rounded from "../../common/RoundedButton/RoundedButton";
@@ -73,9 +73,9 @@ const Header = () => {
     loadGSAP();
 
     return () => {
-      const buttonElement = button.current;  // Capture button.current at cleanup
+      const buttonElement = button.current;  // Copy ref value into a variable
       if (buttonElement && gsap) {
-        gsap.killTweensOf(buttonElement);  // Use captured buttonElement
+        gsap.killTweensOf(buttonElement);
       }
     };
   }, []);
