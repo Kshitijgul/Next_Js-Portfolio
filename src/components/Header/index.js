@@ -12,9 +12,10 @@ const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const button = useRef(null);
   const router = useRouter(); // Initialize useRouter
-  let gsap;
 
   useEffect(() => {
+    let gsap;  // Move gsap declaration inside useEffect
+
     const loadGSAP = async () => {
       const [gsapModule, ScrollTriggerModule] = await Promise.all([
         import("gsap/dist/gsap"),
@@ -26,15 +27,16 @@ const Header = () => {
       gsap.registerPlugin(ScrollTrigger);
 
       const setupAnimation = () => {
-        if (button.current) {
-          gsap.to(button.current, {
+        const buttonElement = button.current;  // Safely reference button.current inside the effect
+        if (buttonElement) {
+          gsap.to(buttonElement, {
             scrollTrigger: {
               trigger: document.documentElement,
               start: 0,
               end: window.innerHeight,
               onLeave: () => {
-                if (button.current) {
-                  gsap.to(button.current, {
+                if (buttonElement) {
+                  gsap.to(buttonElement, {
                     scale: 1,
                     duration: 0.25,
                     ease: "power1.out",
@@ -42,8 +44,8 @@ const Header = () => {
                 }
               },
               onEnterBack: () => {
-                if (button.current) {
-                  gsap.to(button.current, {
+                if (buttonElement) {
+                  gsap.to(buttonElement, {
                     scale: 0,
                     duration: 0.25,
                     ease: "power1.out",
@@ -71,8 +73,9 @@ const Header = () => {
     loadGSAP();
 
     return () => {
-      if (button.current && gsap) {
-        gsap.killTweensOf(button.current);
+      const buttonElement = button.current;  // Copy ref value into a variable
+      if (buttonElement && gsap) {
+        gsap.killTweensOf(buttonElement);
       }
     };
   }, []);
