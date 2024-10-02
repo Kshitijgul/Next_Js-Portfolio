@@ -7,7 +7,7 @@ import { useInView, useAnimation } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 
-const index = () => {
+const Index = () => {  // Component name starts with an uppercase letter
   const containerRef = useRef(null);
   const controls = useAnimation(); // For controlling animation manually
   const container = useRef(null);
@@ -30,7 +30,6 @@ const index = () => {
         </p>
         <div className={styles.Mainsection}>
           <div className={styles.Mainsection_flex}>
-            {/* <div className={styles.Timeline}></div> */}
             <motion.div
               ref={containerRef}
               animate={controls} // Bind animation controls
@@ -40,20 +39,20 @@ const index = () => {
             >
               <p className={styles.year}> Course Year : 2021 - 2025 </p>
               <p className={styles.CourseName}>
-                {" "}
-                B.Tech - Computer Science Enginieering with Specialization in
-                Artificial Intilligence and Machine Learning
+                B.Tech - Computer Science Engineering with Specialization in
+                Artificial Intelligence and Machine Learning
               </p>
 
               <p className={styles.location}>
                 <MdLocationPin /> Pimpri Chinchwad College Of Engineering , Pune
               </p>
             </motion.div>
-            <motion.div              animate={controls} // Bind animation controls
+            <motion.div
+              animate={controls} // Bind animation controls
               initial={{ x: -100, opacity: 0 }} // Initial state when out of view
-              transition={{ duration: 0.5,delay: 0.5  }} // Animation transition settings
+              transition={{ duration: 0.5, delay: 0.5 }} // Animation transition settings
               className={styles.Education}
-              >
+            >
               <p className={styles.year}> Course Year : 2019 - 2021 </p>
               <p className={styles.CourseName}> HSC - Science </p>
 
@@ -62,7 +61,11 @@ const index = () => {
               </p>
             </motion.div>
           </div>
-          <div data-scroll data-scroll-speed={0.2} className={styles.secondSection}>
+          <div
+            data-scroll
+            data-scroll-speed={0.2}
+            className={styles.secondSection}
+          >
             <Magnetic>
               <p>Education </p>
             </Magnetic>
@@ -86,4 +89,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

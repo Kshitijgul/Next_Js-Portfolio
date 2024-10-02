@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 import LocomotiveScroll from "locomotive-scroll";
 import Description from "../components/Description";
 import Skills from "../components/Skills";
-import Education from "../components/Education";
+import Education from "../components/Education/Index";
 import SlidingImages from "../components/SlidingImages";
 import Footer from "../components/Footer";
 
