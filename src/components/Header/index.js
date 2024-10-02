@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router"; // Import useRouter
 import styles from "./styles.module.scss";
-import Nav from "./nav";
+import Nav from "./nav/Index";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Rounded from "../../common/RoundedButton/RoundedButton";
