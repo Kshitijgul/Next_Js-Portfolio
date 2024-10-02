@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styles from "./style.module.scss";
 import { motion, useInView } from "framer-motion";
 import { slideUp, opacity } from "./animation";
-import Rounded from "../../common/RoundedButton";
+import Rounded from "../../common/RoundedButton/RoundedButton";
 import Magnetic from "../../common/Magnetic";
 
 const Index = () => {

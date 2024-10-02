@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import styles from "./style.module.scss";
 import Image from "next/image";
-import Rounded from "../../common/RoundedButton";
+import Rounded from "../../common/RoundedButton/RoundedButton";
 
 const slider1 = [
   {

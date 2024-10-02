@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.scss";
-import Rounded from "../../../common/RoundedButton";
+import Rounded from "../../../common/RoundedButton/RoundedButton";
 import Magnetic from "../../../common/Magnetic";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";

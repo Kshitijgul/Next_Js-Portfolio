@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import Nav from "./nav";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Rounded from "../../common/RoundedButton";
+import Rounded from "../../common/RoundedButton/RoundedButton";
 import MagneticComponent from "./../../common/Magnetic/index";
 import LocomotiveScroll from "locomotive-scroll";
 
