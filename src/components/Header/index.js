@@ -73,9 +73,9 @@ const Header = () => {
     loadGSAP();
 
     return () => {
-      const buttonElement = button.current;  // Copy ref value into a variable
+      const buttonElement = button.current;  // Capture button.current at cleanup
       if (buttonElement && gsap) {
-        gsap.killTweensOf(buttonElement);
+        gsap.killTweensOf(buttonElement);  // Use captured buttonElement
       }
     };
   }, []);
